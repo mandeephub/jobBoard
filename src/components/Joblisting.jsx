@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import { FaLocationPin } from "react-icons/fa6";
+
 const JobListing = ({ job }) => {
   let description = job.description;
 
@@ -14,8 +16,7 @@ const JobListing = ({ job }) => {
 
   function toggleshowlessmore(){
 
-        SetShowFullDescription( ShowFullDescription = !ShowFullDescription )
-
+       SetShowFullDescription((prevState) => !prevState)
   }
 
 
@@ -40,7 +41,7 @@ const JobListing = ({ job }) => {
 
           <div className="flex flex-col lg:flex-row justify-between mb-4">
             <div className="text-orange-700 mb-3">
-              <i className="fa-solid fa-location-dot text-lg"></i>
+              <FaLocationPin className="inline text-lg mr-1"/>
               {job.location}
             </div>
             <a
