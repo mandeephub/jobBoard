@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Hero = ( { heading, subheading } ) => {
+const Hero = ( { heading="Become a React Dev", subheading="Find the React job that fits your skills and needs" } ) => {
   return (
     <>
 
