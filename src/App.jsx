@@ -3,38 +3,34 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
   RouterProvider,
-  Router
-} from 'react-router-dom'
-
-
+  Router,
+} from "react-router-dom";
 
 import { useState } from "react";
 import "./App.css";
 
-import MainLayout from './layouts/MainLayout';
-import HomePage from './pages/HomePage';
-import JobsPage from './pages/JobsPage'
-import NotFound from './pages/NotFound';
+import MainLayout from "./layouts/MainLayout";
+import HomePage from "./pages/HomePage";
+import JobsPage from "./pages/JobsPage";
+import JobPage from "./pages/JobPage";
+import NotFound from "./pages/NotFound";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-  
-      <Route path='/' element={<MainLayout/>}>
+    <Route path="/" element={<MainLayout />}>
+      <Route index element={<HomePage />} />
 
-          <Route index element={<HomePage/>} />
+      <Route path="/jobs" element={<JobsPage />} />
 
-          <Route path='/jobs' element={<JobsPage/>} />
+      <Route path="/job/:id" element={<JobPage />} />
 
-          <Route path='*' element={<NotFound/>} />
-
-      </Route>
-    
-
-)
-)
+      <Route path="*" element={<NotFound />} />
+    </Route>
+  )
+);
 
 function App() {
-  return <RouterProvider router={router}/>
+  return <RouterProvider router={router} />;
 }
 
 export default App;
