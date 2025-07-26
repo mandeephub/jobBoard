@@ -1,1 +1,27 @@
 @import "tailwindcss";
+
+
+
+.customsection_outer {
+    display: flex;
+}
+
+
+.customsection_outer main{
+    width: 70%;
+}
+
+.customsection_outer aside{
+    width: 30%;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+.customsection_outer {
+    display: flex;
+    flex-direction: column;
+}
+
+
+}
