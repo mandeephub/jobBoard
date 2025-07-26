@@ -50,7 +50,7 @@ const JobListings = ({ isHome = false }) => {
                   size={150}
                   aria-label="Loading Spinner"
                   data-testid="loader"
-                />
+                />  
               </>
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
